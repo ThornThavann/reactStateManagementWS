@@ -1,22 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { AppDispatch } from "../store/store";
+import { addItem } from "../store/shoppingSlice";
+import { useDispatch } from "react-redux";
+import { newName } from "../store/userSlice";
 export const AddItem = () => {
   const navigate = useNavigate();
   const [itemName, setItemName] = useState("");
-  const [userName, setUserName] = useState(""); // State for user name
 
+  const [userName, setUserName] = useState(""); // State for user name
+  const dispatch = useDispatch<AppDispatch>();
+  // Add this line to handleAdd function
 
   const handleAdd = () => {
     if (itemName.trim()) {
       setItemName(""); // Clear input
       navigate("/"); // Go back to list
+      dispatch(addItem(itemName));
+
     }
   };
 
   const handleSetName = () => {
     if (userName.trim()) {
       setUserName("");
+      dispatch(newName(userName));
+
     }
   };
 
