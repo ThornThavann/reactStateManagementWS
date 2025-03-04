@@ -8,6 +8,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<ShoppingList />} />
         <Route path="/add-item" element={<AddItem />} />
+
       </Routes>
     </Router>
   );

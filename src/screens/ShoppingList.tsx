@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
     useEffect(() => {
       fetch("https://jsonplaceholder.typicode.com/todos")
         .then((response) => response.json())
-        .then((data) => setTodos(data.slice(0, 10))) // Limit to 10 items
+        .then((data) => setTodos(data.slice())) // Limit to 10 items
         .catch((error) => console.error("Error fetching todos:", error));
     }, []);
 
