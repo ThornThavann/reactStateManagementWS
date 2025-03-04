@@ -5,7 +5,7 @@ interface UserItem {
 }
 
 const initialState: UserItem ={
-    name:"Ah vann solo",
+    name:"vann",
 };
 
 const userSlice = createSlice({

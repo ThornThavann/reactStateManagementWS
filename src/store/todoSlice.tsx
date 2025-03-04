@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
     completed: boolean;
   }
   
-  export const ShoppingList = () => {
+  export const TodoSlide = () => {
     const navigate = useNavigate();
     const items = useSelector((state: RootState) => state.shopping.items);
     const userName = useSelector((state: RootState) => state.user.name);
